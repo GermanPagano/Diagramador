@@ -13,6 +13,10 @@ input {
     /* outline: none !important;
     box-shadow: none !important; */
 }
+.nuevoInput{
+    max-width: 300px!important;
+
+}
 
 label {
     margin-bottom: 5px;
@@ -33,6 +37,7 @@ label {
     input {
         max-width: 100%;
     }
+
 }
 
 /* Anular estilos de Bootstrap para inputs al hacer clic */
