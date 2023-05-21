@@ -13,69 +13,76 @@
     />
     <title>Solicitud de diagrama</title>
   </head>
-  <body style="background-color: #ccc;" >
-
+  <body style="background-color: #ccc">
     <div class="col justify-content-center d-flex bg-primary rounded">
-        <h1 class="display-4 text-white">🚉<strong>D</strong>iagram<strong>ARG</strong></h1>
-      </div>
+      <h1 class="display-4 text-white">
+        🚉<strong>D</strong>iagram<strong>ARG</strong>
+      </h1>
+    </div>
 
-      <div class="container d-flex justify-content-center">
-        <div class="row mt-4">
-          <div class="col">
-            <form id="solicitudForm" class="bg-light rounded p-4">
-              <div class="row">
-                <div class="col">
-                  <div class="mb-3">
-                    <label for="legajo" class="form-label">Legajo:</label>
-                    <input
-                      type="text"
-                      id="legajo"
-                      name="legajo"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="mb-3">
-                    <label for="hoja" class="form-label">Hoja:</label>
-                    <input
-                      type="number"
-                      id="hoja"
-                      name="hoja"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="mb-3">
-                    <label for="franco" class="form-label">Franco:</label>
-                    <input
-                      type="number"
-                      id="franco"
-                      name="franco"
-                      class="form-control"
-                      required
-                    />
-                  </div>
+    <div class="container d-flex justify-content-center">
+      <div class="row mt-4">
+        <div class="col">
+          <form id="solicitudForm" class="bg-light rounded p-4">
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="legajo" class="form-label">Legajo:</label>
+                  <input
+                    placeholder="xxxxx"
+                    type="text"
+                    id="legajo"
+                    name="legajo"
+                    class="form-control"
+                    required
+                  />
                 </div>
               </div>
-              <div class="d-grid">
-                <button type="button" class="btn btn-primary" onclick="addInput()">De ser desplazado</button>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="hoja" class="form-label">Hoja:</label>
+                  <input
+                    placeholder="xxx"
+                    type="number"
+                    id="hoja"
+                    name="hoja"
+                    class="form-control"
+                    required
+                  />
+                </div>
               </div>
-              <div class="d-grid mt-4">
-                <button type="submit" class="btn btn-primary">Enviar Pedido</button>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="franco" class="form-label">Franco:</label>
+                  <input
+                    placeholder="x"
+                    type="number"
+                    id="franco"
+                    name="franco"
+                    class="form-control"
+                    required
+                  />
+                </div>
               </div>
-            </form>
-          </div>
+            </div>
+            <div class="d-grid">
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="addInput()"
+              >
+                De ser desplazado
+              </button>
+            </div>
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-primary">
+                Enviar Pedido
+              </button>
+            </div>
+          </form>
         </div>
       </div>
-      
-      
-      
-  
-    
+    </div>
 
     <div id="resultados"></div>
   </body>
