@@ -15,7 +15,8 @@ function addInput() {
   colHoja.appendChild(labelHoja);
 
   var inputHoja = document.createElement("input");
-  inputHoja.setAttribute("type", "number");
+  inputHoja.setAttribute("type", "xxx");
+  inputHoja.setAttribute("placeholder", "number");
   inputHoja.setAttribute("name", "hoja[]");
   inputHoja.classList.add("form-control", "nuevoInput");
   inputHoja.required = true;
@@ -33,6 +34,7 @@ function addInput() {
 
   var inputFranco = document.createElement("input");
   inputFranco.setAttribute("type", "number");
+  inputFranco.setAttribute("placeholder", "x");
   inputFranco.setAttribute("name", "franco[]");
   inputFranco.classList.add("form-control", "nuevoInput");
   inputFranco.required = true;
