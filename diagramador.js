@@ -2,8 +2,6 @@ import { cargarDatos } from "./firebase";
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Llama a la función para cargar los datos en Firebase Firestore
-  cargarDatos();
 
   fetch("./services/hojas-Diagramas.json")
     .then((response) => response.json())

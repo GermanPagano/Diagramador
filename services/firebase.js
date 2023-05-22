@@ -8,7 +8,7 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 
- async function cargarDatos() {
+ export async function cargarDatos() {
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBZyBYi6p90G4zsZuWvc6fLMAv7_rvltII",
