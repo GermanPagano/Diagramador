@@ -20,17 +20,11 @@ const app = initializeApp(firebaseConfig);
 
 
 
-
-
-
   export async function cargarHojas(db, hojas) {
     try {
       await Promise.all(
         hojas.map(async (hoja) => {
-          const hojaSinId = { ...hoja };
-          delete hojaSinId.id;
-          const docRef = await addDoc(collection(db, "hojas"), hojaSinId);
-          console.log(docRef.title);
+          await addDoc(collection(db, "hojas"), hoja);
         })
       );
       console.log("Hojas cargadas exitosamente en Firebase Firestore");
