@@ -23,13 +23,18 @@ const app = initializeApp(firebaseConfig);
 
 
 
-export async function cargarHojas(){
-    Promise.all(
-        hojas.map( async (post)=> {
-        const resp = await (
-          delete post.id,
-          addDoc(collection(dataBase, 'products'), post));
-        return console.log(resp.title);
-    })
-    )
-}
+  export async function cargarHojas(db, hojas) {
+    try {
+      await Promise.all(
+        hojas.map(async (hoja) => {
+          const hojaSinId = { ...hoja };
+          delete hojaSinId.id;
+          const docRef = await addDoc(collection(db, "hojas"), hojaSinId);
+          console.log(docRef.title);
+        })
+      );
+      console.log("Hojas cargadas exitosamente en Firebase Firestore");
+    } catch (error) {
+      console.error("Error al cargar las hojas en Firebase Firestore:", error);
+    }
+  }
