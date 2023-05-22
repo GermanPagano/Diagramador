@@ -16,7 +16,7 @@ function addInput() {
 
   var inputHoja = document.createElement("input");
   inputHoja.setAttribute("type", "xxx");
-  inputHoja.setAttribute("placeholder", "number");
+  inputHoja.setAttribute("placeholder", "xxx");
   inputHoja.setAttribute("name", "hoja[]");
   inputHoja.classList.add("form-control", "nuevoInput");
   inputHoja.required = true;
