@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(data => {
         const hojas = data;
-        console.log( `%cTenemos cargados ${hojas.length} diagramas`, 'color: green')
+        console.log( `%c   ${hojas.length} DIAGRAMAS CARGADOS DESDE JSON  `, 'background: green')
+
+
         const trabajadores = [
           { legajo: 21083, pedido: [[708, 3], [709, 3]], diagramado: [] },
           { legajo: 14247, pedido: [[708, 3], [709, 3]], diagramado: [] },
