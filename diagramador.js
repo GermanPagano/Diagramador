@@ -1,5 +1,8 @@
 import { cargarDatos } from "./firebase";
 
+// Llamar a la función para cargar las hojas en Firebase Firestore
+cargarDatos();
+
 document.addEventListener("DOMContentLoaded", function () {
 
 
@@ -87,8 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       };
 
-            // Llama a la función para cargar los datos en Firebase Firestore
-            cargarDatos();
+
       diagramador();
 
     })
