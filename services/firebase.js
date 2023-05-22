@@ -44,4 +44,4 @@ const app = initializeApp(firebaseConfig);
         console.error("Error al cargar las hojas en Firebase Firestore:", error);
       }
   }
-  export { cargarDatos };
+  export { cargarHojas };
