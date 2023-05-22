@@ -1,42 +1,45 @@
+
+
 document.addEventListener('DOMContentLoaded', function() {
     fetch('./services/hojas-Diagramas.json')
       .then(response => response.json())
       .then(data => {
         const hojas = data;
-        console.log( `%c   ${hojas.length} DIAGRAMAS CARGADOS DESDE JSON  `, 'background: green')
+        console.log(`%c   ${hojas.length} DIAGRAMAS CARGADOS EXITOSAMENTE  `, 'background: green');
+  
 
-
-        const trabajadores = [
-          { legajo: 21083, pedido: [[708, 3], [709, 3]], diagramado: [] },
-          { legajo: 14247, pedido: [[708, 3], [709, 3]], diagramado: [] },
-          { legajo: 21084, pedido: [[705, 7], [709, 7]], diagramado: [] },
-          { legajo: 14248, pedido: [[705, 7], [704, 7]], diagramado: [] },
-        ];
+        const trabajadores = [];
   
         document.getElementById('solicitudForm').addEventListener('submit', function(event) {
           event.preventDefault(); // Evitar el envío del formulario
   
           // Obtener los valores de los inputs
           const legajo = document.getElementById('legajo').value;
-          const hoja = document.getElementById('hoja').value;
-          const franco = document.getElementById('franco').value;
+          const hojasInputs = document.getElementsByName('hoja');
+          const francosInputs = document.getElementsByName('franco');
   
-          // Crear un nuevo objeto para el legajo ingresado
           const nuevoTrabajador = {
             legajo: parseInt(legajo),
-            pedido: [[parseInt(hoja), parseInt(franco)]],
+            pedido: [],
             diagramado: [],
           };
   
+          // Obtener los valores de los inputs de hojas y francos
+          for (let i = 0; i < hojasInputs.length; i++) {
+            const hoja = parseInt(hojasInputs[i].value);
+            const franco = parseInt(francosInputs[i].value);
+            nuevoTrabajador.pedido.push([hoja, franco]);
+          }
+  
           // Agregar el nuevo objeto al array de trabajadores
           trabajadores.push(nuevoTrabajador);
-  
           console.log(trabajadores);
+
           // Limpiar los valores de los inputs
           document.getElementById('legajo').value = '';
           document.getElementById('hoja').value = '';
           document.getElementById('franco').value = '';
-  
+
           // Realizar las operaciones necesarias con los valores obtenidos
           // ...
         });
@@ -79,4 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('%cError al cargar el archivo hojas.json:', 'color:red', error);
       });
   });
+  
+  
   

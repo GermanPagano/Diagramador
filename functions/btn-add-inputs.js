@@ -17,7 +17,8 @@ function addInput() {
   var inputHoja = document.createElement("input");
   inputHoja.setAttribute("type", "xxx");
   inputHoja.setAttribute("placeholder", "xxx");
-  inputHoja.setAttribute("name", "hoja[]");
+  inputHoja.setAttribute("name", "hoja");
+  inputHoja.setAttribute("id", "hoja");
   inputHoja.classList.add("form-control", "nuevoInput");
   inputHoja.required = true;
   colHoja.appendChild(inputHoja);
@@ -35,7 +36,8 @@ function addInput() {
   var inputFranco = document.createElement("input");
   inputFranco.setAttribute("type", "number");
   inputFranco.setAttribute("placeholder", "x");
-  inputFranco.setAttribute("name", "franco[]");
+  inputFranco.setAttribute("name", "franco");
+  inputFranco.setAttribute("id", "franco");
   inputFranco.classList.add("form-control", "nuevoInput");
   inputFranco.required = true;
   colFranco.appendChild(inputFranco);
@@ -75,4 +77,5 @@ function addInput() {
   nuevaLinea.appendChild(contenedorBtnBorrar);
 
   lineasInputs.appendChild(nuevaLinea);
+
 }
