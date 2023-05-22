@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
-
+import { hojas } from '../services/hojas-Diagramas'
 
 const firebaseConfig = {
   apiKey: "AIzaSyBZyBYi6p90G4zsZuWvc6fLMAv7_rvltII",
@@ -19,29 +19,17 @@ const app = initializeApp(firebaseConfig);
 
 
 
-  async function cargarHojas () {
 
-    try {
-        const hojas = [
-          { "nombre": 701, "turnos": [1, 2, 3, 4, 5, 6, 7] },
-          { "nombre": 702, "turnos": [1, 2, 3, 4, 5, 6, 7] },
-          { "nombre": 703, "turnos": [1, 2, 3, 4, 5, 6, 7] },
-          { "nombre": 704, "turnos": [1, 2, 3, 4, 5, 6, 7] },
-          { "nombre": 705, "turnos": [1, 2, 3, 4, 5, 6, 7] },
-          { "nombre": 706, "turnos": [1, 2, 3, 4, 5, 6, 7] },
-          { "nombre": 707, "turnos": [1, 2, 3, 4, 5, 6, 7] },
-          { "nombre": 708, "turnos": [1, 2, 3, 4, 5, 6, 7] },
-          { "nombre": 709, "turnos": [1, 2, 3, 4, 5, 6, 7] },
-          { "nombre": 710, "turnos": [1, 2, 3, 4, 5, 6, 7] }
-        ];
-    
-        for (const hoja of hojas) {
-          await addDoc(collection(db, "hojas"), hoja);
-        }
-    
-        console.log("Hojas cargadas exitosamente en Firebase Firestore");
-      } catch (error) {
-        console.error("Error al cargar las hojas en Firebase Firestore:", error);
-      }
-  }
-  export { cargarHojas };
+
+
+
+export async function cargarHojas(){
+    Promise.all(
+        hojas.map( async (post)=> {
+        const resp = await (
+          delete post.id,
+          addDoc(collection(dataBase, 'products'), post));
+        return console.log(resp.title);
+    })
+    )
+}

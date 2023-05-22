@@ -6,6 +6,7 @@ import { cargarHojas } from "./firebase";
 document.addEventListener("DOMContentLoaded", function () {
 
     cargarHojas();
+    
   fetch("./services/hojas-Diagramas.json")
     .then((response) => response.json())
     .then((data) => {

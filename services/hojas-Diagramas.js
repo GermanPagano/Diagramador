@@ -1,4 +1,4 @@
-[
+export const hojas = [
   { "nombre": 701, "turnos": [1, 2, 3, 4, 5, 6, 7] },
   { "nombre": 702, "turnos": [1, 2, 3, 4, 5, 6, 7] },
   { "nombre": 703, "turnos": [1, 2, 3, 4, 5, 6, 7] },
