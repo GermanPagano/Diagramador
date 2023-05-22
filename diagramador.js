@@ -1,11 +1,11 @@
 import { cargarDatos } from "./firebase";
 
 // Llamar a la función para cargar las hojas en Firebase Firestore
-cargarDatos();
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
-
+    cargarDatos();
   fetch("./services/hojas-Diagramas.json")
     .then((response) => response.json())
     .then((data) => {
