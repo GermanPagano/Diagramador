@@ -22,7 +22,7 @@ function addInput() {
   colHoja.appendChild(inputHoja);
 
   var colFranco = document.createElement("div");
-  colFranco.classList.add("col-5");
+  colFranco.classList.add("col-5"); 
   nuevaLinea.appendChild(colFranco);
 
   var labelFranco = document.createElement("label");
@@ -39,6 +39,11 @@ function addInput() {
   colFranco.appendChild(inputFranco);
 
 
+  var contenedorBtnBorrar = document.createElement("div");
+  contenedorBtnBorrar.classList.add("col-2"); 
+  contenedorBtnBorrar.classList.add("d-flex");
+  contenedorBtnBorrar.classList.add("justify-content-center");
+  contenedorBtnBorrar.classList.add("align-items-end");
 
   var iconoBorrar = document.createElement("span");
   iconoBorrar.classList.add(
@@ -50,18 +55,20 @@ function addInput() {
     'd-flex',
     "justify-content-center",
     "align-items-center",
-    'col-2',
-    'gap-1'
+    'row',
+    'btn-danger'
   );
-  iconoBorrar.style.height = "100%"; // Establece la altura al 100% para que coincida con los inputs
-  iconoBorrar.style.fontSize = "1.2rem"; // Cambia el tamaño de fuente para hacerlo más pequeño
+  iconoBorrar.style.height = "2.4rem";
+  iconoBorrar.style.width = "80px"; 
+  iconoBorrar.style.fontSize = "1.9rem"; // Cambia el tamaño de fuente para hacerlo más pequeño
   iconoBorrar.style.backgroundColor = "red";
   iconoBorrar.addEventListener("click", function () {
     lineasInputs.removeChild(nuevaLinea);
   });
 
-  
-  nuevaLinea.appendChild(iconoBorrar);
+  contenedorBtnBorrar.appendChild(iconoBorrar);
+
+  nuevaLinea.appendChild(contenedorBtnBorrar);
 
   lineasInputs.appendChild(nuevaLinea);
 }
