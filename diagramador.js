@@ -1,4 +1,10 @@
+import { cargarDatos } from "./firebase";
+
 document.addEventListener("DOMContentLoaded", function () {
+
+  // Llama a la función para cargar los datos en Firebase Firestore
+  cargarDatos();
+
   fetch("./services/hojas-Diagramas.json")
     .then((response) => response.json())
     .then((data) => {
@@ -47,6 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
           // ...
         });
 
+
+
       const diagramador = () => {
         trabajadores.sort((a, b) => a.legajo - b.legajo);
         for (const empleado of trabajadores) {
@@ -81,7 +89,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       };
 
+            // Llama a la función para cargar los datos en Firebase Firestore
+            cargarDatos();
       diagramador();
+
     })
     .catch((error) => {
       console.error(
@@ -91,3 +102,4 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     });
 });
+
