@@ -53,7 +53,6 @@ function addInput() {
     "bi-trash",
     "text-light",
     "rounded",
-    "cursor-pointer",
     'd-flex',
     "justify-content-center",
     "align-items-center",
@@ -64,6 +63,8 @@ function addInput() {
   iconoBorrar.style.width = "80px"; 
   iconoBorrar.style.fontSize = "1rem"; // Cambia el tamaño de fuente para hacerlo más pequeño
   iconoBorrar.style.backgroundColor = "red";
+  iconoBorrar.style.cursor = "pointer";
+
 
   iconoBorrar.addEventListener("click", function () {
     lineasInputs.removeChild(nuevaLinea);
