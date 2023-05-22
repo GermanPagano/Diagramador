@@ -48,7 +48,7 @@ function addInput() {
   var iconoBorrar = document.createElement("span");
   iconoBorrar.classList.add(
     "bi",
-    "bi-x",
+    "bi-trash",
     "text-light",
     "rounded",
     "cursor-pointer",
@@ -60,8 +60,9 @@ function addInput() {
   );
   iconoBorrar.style.height = "2.4rem";
   iconoBorrar.style.width = "80px"; 
-  iconoBorrar.style.fontSize = "1.9rem"; // Cambia el tamaño de fuente para hacerlo más pequeño
+  iconoBorrar.style.fontSize = "1rem"; // Cambia el tamaño de fuente para hacerlo más pequeño
   iconoBorrar.style.backgroundColor = "red";
+
   iconoBorrar.addEventListener("click", function () {
     lineasInputs.removeChild(nuevaLinea);
   });
