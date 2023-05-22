@@ -62,7 +62,7 @@ function addInput() {
   iconoBorrar.style.height = "2.4rem";
   iconoBorrar.style.width = "80px"; 
   iconoBorrar.style.fontSize = "1rem"; // Cambia el tamaño de fuente para hacerlo más pequeño
-  iconoBorrar.style.backgroundColor = "red";
+  iconoBorrar.style.backgroundColor = "#FC2B32";
   iconoBorrar.style.cursor = "pointer";
 
 
