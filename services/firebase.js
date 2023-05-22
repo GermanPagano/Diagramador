@@ -19,7 +19,7 @@ const app = initializeApp(firebaseConfig);
 
 
 
-
+const hojas = hojas;
   export async function cargarHojas(db, hojas) {
     try {
       await Promise.all(
